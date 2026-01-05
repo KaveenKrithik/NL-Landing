@@ -103,41 +103,33 @@ export default function Header() {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Dropdown */}
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="fixed inset-0 bg-black/60 z-[60] lg:hidden"
-              onClick={() => setIsMobileMenuOpen(false)}
-            />
-            <motion.div
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-              className="fixed top-20 right-0 bottom-0 w-80 max-w-[85vw] bg-white shadow-2xl z-[70] lg:hidden overflow-y-auto"
-            >
-              <div className="p-6 space-y-3">
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="lg:hidden overflow-hidden"
+          >
+            <div className="bg-white border-t border-gray-200 shadow-xl">
+              <div className="container mx-auto px-6 py-4 space-y-2">
                 {navItems.map((item, index) => {
                   const isActive = pathname === item.path;
                   return (
                     <motion.div
                       key={item.name}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.2, delay: index * 0.05 }}
                     >
                       <Link
                         href={item.path}
                         onClick={() => setIsMobileMenuOpen(false)}
-                        className={`block px-6 py-4 rounded-xl text-base font-bold transition-all ${
+                        className={`block px-6 py-3 rounded-lg text-base font-semibold transition-all ${
                           isActive
-                            ? "bg-primary text-white shadow-lg"
+                            ? "bg-primary text-white shadow-md"
                             : "text-gray-900 hover:bg-gray-100"
                         }`}
                       >
@@ -147,8 +139,8 @@ export default function Header() {
                   );
                 })}
               </div>
-            </motion.div>
-          </>
+            </div>
+          </motion.div>
         )}
       </AnimatePresence>
     </motion.header>
