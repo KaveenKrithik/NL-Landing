@@ -29,12 +29,12 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-gray-900 mb-8 leading-[1.1] tracking-tight">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-gray-900 mb-8 leading-[1.1] tracking-tight drop-shadow-lg">
               Transforming Futures with{" "}
-              <span className="text-primary">Next-Gen Innovation & Education!</span>
+              <span className="text-primary drop-shadow-md">Next-Gen Innovation & Education!</span>
             </h1>
 
-            <p className="text-xl sm:text-2xl lg:text-3xl text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed font-light">
+            <p className="text-xl sm:text-2xl lg:text-3xl text-gray-800 max-w-4xl mx-auto mb-12 leading-relaxed font-medium drop-shadow-md bg-white/60 backdrop-blur-sm px-6 py-4 rounded-2xl">
               Revolutionize education with comprehensive STEM solutions! From
               state-of-the-art STEM labs to hands-on interactive workshops and
               expert-led training programs, we empower curiosity, creativity, and

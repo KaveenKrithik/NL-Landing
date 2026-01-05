@@ -95,8 +95,8 @@ export default function FeaturesSection() {
 
                 {/* Content */}
                 <div className="w-full lg:w-1/2">
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-                  <p className="text-lg text-gray-600 leading-relaxed">{feature.description}</p>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-4 drop-shadow-sm">{feature.title}</h3>
+                  <p className="text-lg text-gray-700 font-medium leading-relaxed bg-white/80 backdrop-blur-sm px-4 py-3 rounded-xl">{feature.description}</p>
                 </div>
               </motion.div>
             );

@@ -33,11 +33,11 @@ export default function FutureInnovators() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16 lg:mb-20"
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight drop-shadow-md">
             Empowering{" "}
-            <span className="text-primary">Future Innovators</span>
+            <span className="text-primary drop-shadow-sm">Future Innovators</span>
           </h2>
-          <p className="text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto font-light">
+          <p className="text-xl lg:text-2xl text-gray-800 max-w-3xl mx-auto font-semibold bg-white/70 backdrop-blur-sm px-6 py-4 rounded-2xl drop-shadow-sm">
             Collaborating with Next-Gen Educational Partners to Shape the
             Nation's Change Makers.
           </p>

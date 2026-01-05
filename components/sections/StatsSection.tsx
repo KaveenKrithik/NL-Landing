@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Users, GraduationCap, Award, TrendingUp } from "lucide-react";
+import AnimatedNumber from "@/components/ui/AnimatedNumber";
 
 const stats = [
   {
@@ -71,15 +72,20 @@ export default function StatsSection() {
                   <Icon className="w-10 h-10 lg:w-12 lg:h-12 text-white" />
                 </div>
                 <motion.div
-                  className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-3"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
+                  className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-3 drop-shadow-2xl"
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: index * 0.1 + 0.3 }}
+                  transition={{ 
+                    duration: 0.8, 
+                    delay: index * 0.1 + 0.3,
+                    type: "spring",
+                    stiffness: 100
+                  }}
                 >
-                  {stat.number}
+                  <AnimatedNumber value={stat.number} duration={2} />
                 </motion.div>
-                <div className="text-lg text-white/90 font-medium">{stat.label}</div>
+                <div className="text-lg text-white font-semibold drop-shadow-lg">{stat.label}</div>
               </motion.div>
             );
           })}

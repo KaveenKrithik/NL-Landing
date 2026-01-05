@@ -84,10 +84,10 @@ export default function STEMPillars() {
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 relative z-10">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 relative z-10 drop-shadow-sm">
                     {pillar.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed flex-grow relative z-10">
+                  <p className="text-gray-700 font-medium leading-relaxed flex-grow relative z-10 bg-white/60 backdrop-blur-sm px-4 py-3 rounded-xl">
                     {pillar.description}
                   </p>
 

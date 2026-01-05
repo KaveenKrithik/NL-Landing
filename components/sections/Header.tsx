@@ -111,7 +111,7 @@ export default function Header() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 lg:hidden"
+              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[60] lg:hidden"
               onClick={() => setIsMobileMenuOpen(false)}
             />
             <motion.div
@@ -119,9 +119,9 @@ export default function Header() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-20 right-0 bottom-0 w-80 max-w-[85vw] glass shadow-2xl z-50 lg:hidden"
+              className="fixed top-20 right-0 bottom-0 w-80 max-w-[85vw] bg-white/95 backdrop-blur-xl border-l border-gray-200 shadow-2xl z-[70] lg:hidden overflow-y-auto"
             >
-              <div className="p-6 space-y-2">
+              <div className="p-6 space-y-3">
                 {navItems.map((item, index) => {
                   const isActive = pathname === item.path;
                   return (
@@ -134,10 +134,10 @@ export default function Header() {
                       <Link
                         href={item.path}
                         onClick={() => setIsMobileMenuOpen(false)}
-                        className={`block px-6 py-4 rounded-xl text-base font-medium transition-all ${
+                        className={`block px-6 py-4 rounded-xl text-base font-semibold transition-all ${
                           isActive
                             ? "bg-primary text-white shadow-lg"
-                            : "text-gray-700 hover:bg-gray-100"
+                            : "text-gray-900 hover:bg-gray-100 bg-white/50"
                         }`}
                       >
                         {item.name}

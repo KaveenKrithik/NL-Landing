@@ -51,10 +51,10 @@ export default function AboutUs() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 tracking-tight">
-              About <span className="text-primary">Nexus Labs</span>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 tracking-tight drop-shadow-lg">
+              About <span className="text-primary drop-shadow-md">Nexus Labs</span>
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed font-light">
+            <p className="text-xl lg:text-2xl text-gray-800 leading-relaxed font-semibold bg-white/70 backdrop-blur-sm px-6 py-4 rounded-2xl drop-shadow-sm">
               Transforming education through innovation, one student at a time.
             </p>
           </motion.div>
