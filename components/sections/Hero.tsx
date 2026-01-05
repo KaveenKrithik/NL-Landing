@@ -73,6 +73,7 @@ export default function Hero() {
           target="_blank"
           rel="noopener noreferrer"
           className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-2xl hover:shadow-green-500/50 transition-all hover:scale-110"
+          aria-label="WhatsApp"
         >
           <svg
             className="w-8 h-8 text-white"
@@ -84,7 +85,7 @@ export default function Hero() {
         </a>
 
         <div className="relative">
-          <button className="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-2xl hover:shadow-primary/50 transition-all text-white font-bold text-xl hover:scale-110">
+          <button className="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-2xl hover:shadow-primary/50 transition-all text-white font-bold text-xl hover:scale-110" aria-label="Chat">
             P
           </button>
         </div>

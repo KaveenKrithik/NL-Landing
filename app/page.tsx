@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
+import ScrollToTop from "@/components/ui/ScrollToTop";
 
 // Lazy load heavy components
 const STEMPillars = dynamic(() => import("@/components/sections/STEMPillars"), {
@@ -39,6 +40,7 @@ export default function Home() {
       <Testimonials />
       <CTASection />
       <Footer />
+      <ScrollToTop />
     </main>
   );
 }
