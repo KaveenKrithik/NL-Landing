@@ -103,7 +103,7 @@ export default function Header() {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Curtain Style */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <>
@@ -111,33 +111,69 @@ export default function Header() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[60] lg:hidden"
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 bg-black/60 z-[60] lg:hidden"
               onClick={() => setIsMobileMenuOpen(false)}
             />
+            {/* Left Curtain */}
             <motion.div
-              initial={{ x: "100%" }}
+              initial={{ x: "-50%" }}
               animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-20 right-0 bottom-0 w-80 max-w-[85vw] bg-white/95 backdrop-blur-xl border-l border-gray-200 shadow-2xl z-[70] lg:hidden overflow-y-auto"
+              exit={{ x: "-50%" }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="fixed top-0 left-0 bottom-0 w-1/2 bg-white shadow-2xl z-[70] lg:hidden overflow-y-auto"
             >
-              <div className="p-6 space-y-3">
-                {navItems.map((item, index) => {
+              <div className="p-6 pt-24 space-y-3">
+                {navItems.slice(0, Math.ceil(navItems.length / 2)).map((item, index) => {
+                  const isActive = pathname === item.path;
+                  return (
+                    <motion.div
+                      key={item.name}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.2, delay: index * 0.05 }}
+                    >
+                      <Link
+                        href={item.path}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className={`block px-6 py-4 rounded-xl text-base font-bold transition-all ${
+                          isActive
+                            ? "bg-primary text-white shadow-lg"
+                            : "text-gray-900 hover:bg-gray-100"
+                        }`}
+                      >
+                        {item.name}
+                      </Link>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </motion.div>
+            {/* Right Curtain */}
+            <motion.div
+              initial={{ x: "50%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "50%" }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="fixed top-0 right-0 bottom-0 w-1/2 bg-white shadow-2xl z-[70] lg:hidden overflow-y-auto border-l border-gray-200"
+            >
+              <div className="p-6 pt-24 space-y-3">
+                {navItems.slice(Math.ceil(navItems.length / 2)).map((item, index) => {
                   const isActive = pathname === item.path;
                   return (
                     <motion.div
                       key={item.name}
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.05 }}
+                      transition={{ duration: 0.2, delay: index * 0.05 }}
                     >
                       <Link
                         href={item.path}
                         onClick={() => setIsMobileMenuOpen(false)}
-                        className={`block px-6 py-4 rounded-xl text-base font-semibold transition-all ${
+                        className={`block px-6 py-4 rounded-xl text-base font-bold transition-all ${
                           isActive
                             ? "bg-primary text-white shadow-lg"
-                            : "text-gray-900 hover:bg-gray-100 bg-white/50"
+                            : "text-gray-900 hover:bg-gray-100"
                         }`}
                       >
                         {item.name}

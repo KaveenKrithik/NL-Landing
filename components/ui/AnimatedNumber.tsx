@@ -35,7 +35,7 @@ export default function AnimatedNumber({ value, duration = 2 }: AnimatedNumberPr
 
     const animate = (timestamp: number) => {
       if (!startTime) startTime = timestamp;
-      const progress = Math.min((timestamp - startTime) / (duration * 1000), 1);
+      const progress = Math.min((timestamp - startTime) / (duration * 500), 1); // Faster: 500ms instead of 1000ms
       
       // Easing function for smooth animation
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);

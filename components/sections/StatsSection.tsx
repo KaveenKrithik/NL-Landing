@@ -77,10 +77,10 @@ export default function StatsSection() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ 
-                    duration: 0.8, 
-                    delay: index * 0.1 + 0.3,
+                    duration: 0.4, 
+                    delay: index * 0.05 + 0.1,
                     type: "spring",
-                    stiffness: 100
+                    stiffness: 200
                   }}
                 >
                   <AnimatedNumber value={stat.number} duration={2} />
