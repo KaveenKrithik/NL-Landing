@@ -142,9 +142,9 @@ export default function Header() {
                 />
                 <div>
                   <div className="text-xl lg:text-2xl font-bold tracking-wide">
-                    <span className="text-white">LUMIERE</span>
+                    <span className="text-primary">LUMIERE</span>
                   </div>
-                  <div className="text-xs lg:text-sm font-medium text-primary tracking-widest">
+                  <div className="text-xs lg:text-sm font-medium text-white tracking-widest">
                     FOUNDATION
                   </div>
                 </div>

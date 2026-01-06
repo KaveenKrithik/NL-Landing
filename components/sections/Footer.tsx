@@ -52,8 +52,8 @@ export default function Footer() {
                 className="h-12 w-auto"
               />
               <div>
-                <div className="text-xl font-bold tracking-wide text-white">LUMIERE</div>
-                <div className="text-xs font-medium text-primary tracking-widest">FOUNDATION</div>
+                <div className="text-xl font-bold tracking-wide text-primary">LUMIERE</div>
+                <div className="text-xs font-medium text-white tracking-widest">FOUNDATION</div>
               </div>
             </Link>
 
