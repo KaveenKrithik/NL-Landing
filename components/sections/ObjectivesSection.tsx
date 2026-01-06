@@ -1,7 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { Building2, GraduationCap, Monitor } from "lucide-react";
+import { useRef } from "react";
 
 const objectives = [
     {
@@ -27,11 +28,77 @@ const objectives = [
     },
 ];
 
+// Animated curve path component
+function AnimatedCurve() {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+    return (
+        <div ref={ref} className="absolute inset-0 overflow-hidden pointer-events-none">
+            <svg
+                className="absolute w-full h-full"
+                viewBox="0 0 1200 800"
+                preserveAspectRatio="none"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                {/* Main curve - going from bottom left to top right */}
+                <motion.path
+                    d="M-100 750 Q 200 650, 350 500 T 600 350 T 900 200 T 1300 -50"
+                    stroke="#06b6d4"
+                    strokeWidth="4"
+                    strokeLinecap="round"
+                    fill="none"
+                    initial={{ pathLength: 0, opacity: 0 }}
+                    animate={isInView ? { pathLength: 1, opacity: 1 } : { pathLength: 0, opacity: 0 }}
+                    transition={{
+                        pathLength: { duration: 2, ease: "easeInOut" },
+                        opacity: { duration: 0.5 }
+                    }}
+                />
+                {/* Second decorative curve */}
+                <motion.path
+                    d="M-50 850 Q 250 700, 400 550 T 700 400 T 1000 250 T 1350 50"
+                    stroke="#06b6d4"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    fill="none"
+                    opacity="0.3"
+                    initial={{ pathLength: 0, opacity: 0 }}
+                    animate={isInView ? { pathLength: 1, opacity: 0.3 } : { pathLength: 0, opacity: 0 }}
+                    transition={{
+                        pathLength: { duration: 2.5, ease: "easeInOut", delay: 0.3 },
+                        opacity: { duration: 0.5, delay: 0.3 }
+                    }}
+                />
+                {/* Third decorative curve */}
+                <motion.path
+                    d="M-150 700 Q 150 600, 300 450 T 550 300 T 850 150 T 1250 -100"
+                    stroke="#06b6d4"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    fill="none"
+                    opacity="0.2"
+                    initial={{ pathLength: 0, opacity: 0 }}
+                    animate={isInView ? { pathLength: 1, opacity: 0.2 } : { pathLength: 0, opacity: 0 }}
+                    transition={{
+                        pathLength: { duration: 2.2, ease: "easeInOut", delay: 0.5 },
+                        opacity: { duration: 0.5, delay: 0.5 }
+                    }}
+                />
+            </svg>
+        </div>
+    );
+}
+
 export default function ObjectivesSection() {
     return (
         <section id="objectives" className="py-24 lg:py-32 bg-white relative overflow-hidden">
             {/* Background Decoration */}
             <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 to-transparent" />
+
+            {/* Animated Curve Background */}
+            <AnimatedCurve />
 
             <div className="container mx-auto px-6 lg:px-12 relative z-10">
                 <motion.div
@@ -66,7 +133,7 @@ export default function ObjectivesSection() {
                                 transition={{ duration: 0.6, delay: index * 0.1 }}
                                 className="group"
                             >
-                                <div className="h-full bg-white rounded-3xl p-8 lg:p-10 border border-gray-100 hover:border-gray-200 transition-all duration-500 hover:shadow-2xl hover:shadow-gray-200/50 flex flex-col">
+                                <div className="h-full bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-10 border border-gray-100 hover:border-gray-200 transition-all duration-500 hover:shadow-2xl hover:shadow-gray-200/50 flex flex-col">
                                     {/* Icon */}
                                     <div className="mb-6">
                                         <div

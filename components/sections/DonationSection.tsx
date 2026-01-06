@@ -14,7 +14,7 @@ const impactLevels = [
 ];
 
 export default function DonationSection() {
-    const [selectedLevel, setSelectedLevel] = useState(4); // Default to Scholarship
+    const [selectedLevel, setSelectedLevel] = useState(4);
 
     const currentImpact = impactLevels[selectedLevel];
 
@@ -145,22 +145,22 @@ export default function DonationSection() {
 
             {/* Custom Slider Styles */}
             <style jsx>{`
-        input[type="range"]::-webkit-slider-thumb {
-          -webkit-appearance: none;
-          appearance: none;
-          width: 0;
-          height: 0;
-          background: transparent;
-          cursor: pointer;
-        }
-        input[type="range"]::-moz-range-thumb {
-          width: 0;
-          height: 0;
-          background: transparent;
-          cursor: pointer;
-          border: none;
-        }
-      `}</style>
+                input[type="range"]::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    width: 0;
+                    height: 0;
+                    background: transparent;
+                    cursor: pointer;
+                }
+                input[type="range"]::-moz-range-thumb {
+                    width: 0;
+                    height: 0;
+                    background: transparent;
+                    cursor: pointer;
+                    border: none;
+                }
+            `}</style>
         </section>
     );
 }

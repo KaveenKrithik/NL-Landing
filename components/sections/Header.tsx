@@ -175,7 +175,7 @@ export default function Header() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.25, duration: 0.4 }}
               >
-                <Link href="#donate">
+                <Link href="/donate">
                   <motion.button
                     className="ml-4 px-6 py-3 bg-primary text-white rounded-full text-sm font-semibold flex items-center gap-2 shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 transition-all duration-300"
                     whileHover={{ scale: 1.05 }}
@@ -235,7 +235,7 @@ export default function Header() {
                   transition={{ duration: 0.2, delay: 0.2 }}
                 >
                   <Link
-                    href="#donate"
+                    href="/donate"
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="block px-6 py-3 mt-2 bg-primary text-white rounded-lg text-base font-semibold text-center"
                   >
