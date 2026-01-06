@@ -133,9 +133,9 @@ export default function Footer() {
             <h4 className="text-lg font-semibold text-white mb-6">Contact Us</h4>
 
             <div className="space-y-4 mb-8">
-              <a href="mailto:info@lumierefoundation.org" className="flex items-center gap-3 text-sm text-gray-400 hover:text-primary transition-colors">
+              <a href="mailto:lumierefoundation.india@gmail.com" className="flex items-center gap-3 text-sm text-gray-400 hover:text-primary transition-colors">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                info@lumierefoundation.org
+                lumierefoundation.india@gmail.com
               </a>
               <a href="tel:+914412345678" className="flex items-center gap-3 text-sm text-gray-400 hover:text-primary transition-colors">
                 <Phone className="w-4 h-4 flex-shrink-0" />

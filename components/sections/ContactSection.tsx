@@ -125,13 +125,13 @@ export default function ContactSection() {
                         <h3 className="text-2xl font-bold text-white mb-8">Contact Information</h3>
 
                         <div className="space-y-6 mb-10">
-                            <a href="mailto:info@lumierefoundation.org" className="flex items-start gap-4 group">
+                            <a href="mailto:lumierefoundation.india@gmail.com" className="flex items-start gap-4 group">
                                 <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors">
                                     <Mail className="w-5 h-5 text-accent" />
                                 </div>
                                 <div>
                                     <div className="text-sm text-gray-500 mb-1">Email</div>
-                                    <div className="text-white group-hover:text-accent transition-colors">info@lumierefoundation.org</div>
+                                    <div className="text-white group-hover:text-accent transition-colors">lumierefoundation.india@gmail.com</div>
                                 </div>
                             </a>
 
