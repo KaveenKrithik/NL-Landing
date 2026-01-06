@@ -37,11 +37,25 @@
   }
 
   .glass-dark {
-    @apply bg-gray-900/80 backdrop-blur-xl border border-white/10;
+    @apply bg-navy/80 backdrop-blur-xl border border-white/10;
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent;
+  }
+
+  .tech-pattern {
+    background-image: 
+      linear-gradient(rgba(6, 182, 212, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(6, 182, 212, 0.03) 1px, transparent 1px),
+      linear-gradient(rgba(6, 182, 212, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(6, 182, 212, 0.02) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+  }
+
+  .tech-glow {
+    background: radial-gradient(ellipse at 50% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
   }
 }
 
@@ -51,15 +65,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #fafafa;
+  background: #0f172a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #d1d5db;
+  background: #334155;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #9ca3af;
+  background: #475569;
 }
-

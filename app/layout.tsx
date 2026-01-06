@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Nexus Labs - Transforming Futures with Next-Gen Innovation & Education",
-  description: "Revolutionize education with comprehensive STEM solutions! From state-of-the-art STEM labs to hands-on interactive workshops and expert-led training programs.",
+  title: "Lumiere Foundation - Empowering Generations Through Education",
+  description: "A Public Charitable Trust dedicated to establishing educational institutions, promoting academic excellence, and providing vocational training to the underprivileged across Tamil Nadu and India.",
 };
 
 export default function RootLayout({
@@ -24,4 +24,3 @@ export default function RootLayout({
     </html>
   );
 }
-

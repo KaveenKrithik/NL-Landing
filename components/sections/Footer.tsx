@@ -2,46 +2,38 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 
-const services = [
-  "Propeller STEM Labs",
-  "ATAL Tinkering Labs",
-  "Fabrication Labs",
-  "CSR STEM Solutions",
-  "Workshops",
-  "Courses",
+const trustLinks = [
+  "About the Trust",
+  "Our Founders",
+  "Trust Deed",
+  "Annual Reports",
 ];
 
-const community = ["Nexus Young Scientist", "Nexus Wings"];
+const programLinks = [
+  "Schools",
+  "Scholarships",
+  "Vocational Training",
+  "Digital Literacy",
+];
 
-const resources = [
+const legalLinks = [
   "Privacy Policy",
-  "Refund and Returns Policy",
-  "Terms and Conditions",
-];
-
-const knowMore = [
-  "Science with Salman",
-  "Awards & Recognitions",
-  "Success Stories",
-  "News",
-  "Blogs",
+  "Terms of Use",
+  "80G Certificate",
+  "12A Registration",
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
-      </div>
+    <footer className="bg-navy text-gray-300 relative overflow-hidden">
+      {/* Tech Pattern */}
+      <div className="absolute inset-0 tech-pattern opacity-30" />
 
       <div className="container mx-auto px-6 lg:px-12 py-16 lg:py-20 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-16">
-          {/* Column 1: Propeller Technologies */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+          {/* Column 1: About */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -49,139 +41,120 @@ export default function Footer() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-1"
           >
-            <h3 className="text-2xl font-bold text-white mb-4">
-              <span className="text-primary">Nexus</span> Labs
-            </h3>
+            {/* Logo */}
+            <Link href="/" className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-12 bg-gradient-to-br from-gray-400 to-gray-600 rounded-sm flex items-center justify-center">
+                <div className="w-6 h-6 bg-gradient-to-br from-gray-300 to-gray-500 rounded-sm" />
+              </div>
+              <div>
+                <div className="text-xl font-bold tracking-wide text-white">LUMIERE</div>
+                <div className="text-xs font-medium text-primary tracking-widest">FOUNDATION</div>
+              </div>
+            </Link>
+
             <p className="text-sm leading-relaxed mb-6 text-gray-400">
-              Nexus Labs is one of the top 10 STEM education
-              institutions in India and Tamil Nadu's leading ATAL and STEM lab
-              providers.
+              A Public Charitable Trust registered under the Indian Trusts Act, 1882. Dedicated to education and empowerment across Tamil Nadu and India.
             </p>
-            <div className="flex gap-2 mb-6">
-              <div className="px-3 py-1.5 bg-primary/20 rounded-lg text-xs font-semibold text-primary border border-primary/30">
-                STEM
-              </div>
-              <div className="px-3 py-1.5 bg-gray-800 rounded-lg text-xs font-semibold border border-gray-700">
-                STEMI
-              </div>
-            </div>
+
             {/* Social Links */}
-            <div className="flex gap-4">
+            <div className="flex gap-3">
               {[Facebook, Twitter, Instagram, Linkedin].map((Icon, index) => (
                 <motion.a
                   key={index}
                   href="#"
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
+                  className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <Icon className="w-5 h-5" />
+                  <Icon className="w-4 h-4" />
                 </motion.a>
               ))}
             </div>
           </motion.div>
 
-          {/* Column 2: Our Services */}
+          {/* Column 2: The Trust */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h4 className="text-lg font-semibold text-white mb-6">Our Services</h4>
+            <h4 className="text-lg font-semibold text-white mb-6">The Trust</h4>
             <ul className="space-y-3">
-              {services.map((service) => (
-                <li key={service}>
+              {trustLinks.map((link) => (
+                <li key={link}>
                   <Link
-                    href={`/services#${service.toLowerCase().replace(/\s+/g, "-")}`}
+                    href="#"
                     className="text-sm text-gray-400 hover:text-primary transition-colors duration-200 flex items-center gap-2 group"
                   >
                     <span className="w-1.5 h-1.5 bg-gray-600 rounded-full group-hover:bg-primary transition-colors" />
-                    {service}
+                    {link}
                   </Link>
                 </li>
               ))}
             </ul>
           </motion.div>
 
-          {/* Column 3: Community */}
+          {/* Column 3: Programs */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h4 className="text-lg font-semibold text-white mb-6">Community</h4>
+            <h4 className="text-lg font-semibold text-white mb-6">Programs</h4>
             <ul className="space-y-3">
-              {community.map((item) => (
-                <li key={item}>
+              {programLinks.map((link) => (
+                <li key={link}>
                   <Link
-                    href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+                    href="#"
                     className="text-sm text-gray-400 hover:text-primary transition-colors duration-200 flex items-center gap-2 group"
                   >
                     <span className="w-1.5 h-1.5 bg-gray-600 rounded-full group-hover:bg-primary transition-colors" />
-                    {item}
+                    {link}
                   </Link>
                 </li>
               ))}
             </ul>
           </motion.div>
 
-          {/* Column 4: Resources */}
+          {/* Column 4: Contact & Legal */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <h4 className="text-lg font-semibold text-white mb-6">Resources</h4>
-            <ul className="space-y-3">
-              {resources.map((resource) => (
-                <li key={resource}>
-                  <Link
-                    href={`#${resource.toLowerCase().replace(/\s+/g, "-")}`}
-                    className="text-sm text-gray-400 hover:text-primary transition-colors duration-200 flex items-center gap-2 group"
-                  >
-                    <span className="w-1.5 h-1.5 bg-gray-600 rounded-full group-hover:bg-primary transition-colors" />
-                    {resource}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
+            <h4 className="text-lg font-semibold text-white mb-6">Contact Us</h4>
 
-          {/* Column 5: Know More */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            <h4 className="text-lg font-semibold text-white mb-6">Know More</h4>
-            <ul className="space-y-3">
-              {knowMore.map((item) => (
-                <li key={item}>
+            <div className="space-y-4 mb-8">
+              <a href="mailto:info@lumierefoundation.org" className="flex items-center gap-3 text-sm text-gray-400 hover:text-primary transition-colors">
+                <Mail className="w-4 h-4 flex-shrink-0" />
+                info@lumierefoundation.org
+              </a>
+              <a href="tel:+914412345678" className="flex items-center gap-3 text-sm text-gray-400 hover:text-primary transition-colors">
+                <Phone className="w-4 h-4 flex-shrink-0" />
+                +91 44 1234 5678
+              </a>
+              <div className="flex items-start gap-3 text-sm text-gray-400">
+                <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                <span>Chennai, Tamil Nadu, India</span>
+              </div>
+            </div>
+
+            <h4 className="text-lg font-semibold text-white mb-4">Legal</h4>
+            <ul className="space-y-2">
+              {legalLinks.map((link) => (
+                <li key={link}>
                   <Link
-                    href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
-                    className="text-sm text-gray-400 hover:text-primary transition-colors duration-200 flex items-center gap-2 group"
+                    href="#"
+                    className="text-sm text-gray-400 hover:text-primary transition-colors duration-200"
                   >
-                    <span className="w-1.5 h-1.5 bg-gray-600 rounded-full group-hover:bg-primary transition-colors" />
-                    {item}
+                    {link}
                   </Link>
                 </li>
               ))}
             </ul>
-            {/* Contact Info */}
-            <div className="mt-8 space-y-3">
-              <a href="mailto:info@propellertechnologies.in" className="flex items-center gap-3 text-sm text-gray-400 hover:text-primary transition-colors">
-                <Mail className="w-4 h-4" />
-                info@propellertechnologies.in
-              </a>
-              <a href="tel:+911234567890" className="flex items-center gap-3 text-sm text-gray-400 hover:text-primary transition-colors">
-                <Phone className="w-4 h-4" />
-                +91 123 456 7890
-              </a>
-            </div>
           </motion.div>
         </div>
 
@@ -191,10 +164,10 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-12 lg:mt-16 pt-8 border-t border-gray-800 text-center text-sm text-gray-500"
+          className="mt-12 lg:mt-16 pt-8 border-t border-white/10 text-center text-sm text-gray-500"
         >
           <p>
-            © {new Date().getFullYear()} Nexus Labs. All rights reserved.
+            © {new Date().getFullYear()} Lumiere Foundation. All rights reserved. | Registered under Indian Trusts Act, 1882
           </p>
         </motion.div>
       </div>

@@ -10,9 +10,19 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#DC2626", // Red color from the site
-          dark: "#B91C1C",
-          light: "#EF4444",
+          DEFAULT: "#f97316", // Orange
+          dark: "#ea580c",
+          light: "#fb923c",
+        },
+        accent: {
+          DEFAULT: "#06b6d4", // Cyan
+          dark: "#0891b2",
+          light: "#22d3ee",
+        },
+        navy: {
+          DEFAULT: "#0f172a",
+          light: "#1e293b",
+          dark: "#020617",
         },
         background: "#FFFFFF",
         foreground: "#1F2937",
@@ -32,6 +42,7 @@ const config: Config = {
         "float": "float 6s ease-in-out infinite",
         "shimmer": "shimmer 2s linear infinite",
         "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "grid-flow": "gridFlow 20s linear infinite",
       },
       keyframes: {
         fadeIn: {
@@ -58,6 +69,10 @@ const config: Config = {
           "0%": { backgroundPosition: "-1000px 0" },
           "100%": { backgroundPosition: "1000px 0" },
         },
+        gridFlow: {
+          "0%": { transform: "translateX(0) translateY(0)" },
+          "100%": { transform: "translateX(-50px) translateY(-50px)" },
+        },
       },
       backdropBlur: {
         xs: "2px",
@@ -67,4 +82,3 @@ const config: Config = {
   plugins: [],
 };
 export default config;
-
