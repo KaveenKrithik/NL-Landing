@@ -10,7 +10,7 @@ const testimonials = [
     location: "Chennai",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&q=80",
     rating: 5,
-    text: "Nexus Labs has transformed our school's approach to STEM education. The labs are state-of-the-art, and our students are more engaged than ever. The results speak for themselves - we've seen a 40% increase in STEM enrollment.",
+    text: "Lumiere Foundation has transformed our community through their educational initiatives. The scholarships and support they provide have enabled many underprivileged students to pursue quality education. The impact is truly remarkable.",
   },
   {
     name: "Rajesh Kumar",
@@ -18,7 +18,7 @@ const testimonials = [
     location: "Bangalore",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&q=80",
     rating: 5,
-    text: "The training programs from Nexus Labs are exceptional. Our teachers have gained invaluable skills, and the curriculum integration has been seamless. Our students are now creating innovative projects we never thought possible.",
+    text: "The vocational training programs from Lumiere Foundation are exceptional. Many women in our community have gained income-generating skills and achieved economic independence. The hostel facilities make it accessible to all.",
   },
   {
     name: "Anjali Mehta",
@@ -26,7 +26,7 @@ const testimonials = [
     location: "Mumbai",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&q=80",
     rating: 5,
-    text: "My daughter's interest in robotics has skyrocketed since joining the Nexus Labs program. The hands-on approach and expert guidance have made learning fun and engaging. Highly recommend!",
+    text: "My daughter received a full scholarship from Lumiere Foundation, including tuition, hostel, and meals. The cultural education programs in music and dance have enriched her life. We are forever grateful.",
   },
   {
     name: "Prof. Suresh Iyer",
@@ -34,7 +34,7 @@ const testimonials = [
     location: "Delhi",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&q=80",
     rating: 5,
-    text: "Nexus Labs' accreditation from STEM.org USA gives us confidence in their quality. The labs are well-maintained, and their support team is always responsive. A true partner in education.",
+    text: "Lumiere Foundation's commitment to educational excellence is evident in their partnerships with reputed institutions. The medical relief camps they organize have helped hundreds in our village. Truly a blessing.",
   },
   {
     name: "Kavya Reddy",
@@ -42,7 +42,7 @@ const testimonials = [
     location: "Hyderabad",
     image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&q=80",
     rating: 5,
-    text: "I love the 3D printing and robotics workshops! The instructors are patient and knowledgeable. I've built projects I'm really proud of, and it's helped me decide to pursue engineering.",
+    text: "I received free medical treatment through Lumiere Foundation's charitable hospital. The care was exceptional, and they covered all expenses. This foundation truly serves the needy with compassion.",
   },
   {
     name: "Dr. Meera Nair",
@@ -50,7 +50,7 @@ const testimonials = [
     location: "Pune",
     image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&q=80",
     rating: 5,
-    text: "Our CSR partnership with Nexus Labs has been incredibly successful. They've helped us bring STEM education to 50+ underserved schools. The impact on students has been remarkable.",
+    text: "Our partnership with Lumiere Foundation has enabled us to support their disaster relief efforts. During the floods, they provided immediate aid and long-term rehabilitation. Their work is truly transformative.",
   },
 ];
 
@@ -79,7 +79,7 @@ export default function Testimonials() {
             <span className="text-primary">What People Say</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Hear from educators, students, and partners who've experienced the Nexus Labs difference
+            Hear from beneficiaries, partners, and community members who've experienced the Lumiere Foundation impact
           </p>
         </motion.div>
 

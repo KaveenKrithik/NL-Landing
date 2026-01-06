@@ -34,12 +34,12 @@ export default function CTASection() {
               <span className="text-sm font-semibold text-primary">Get Started Today</span>
             </div>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 tracking-tight">
-              Ready to Transform Your
+              Join Us in
               <br />
-              <span className="text-primary">STEM Education?</span>
+              <span className="text-primary">Transforming Lives</span>
             </h2>
             <p className="text-xl lg:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-              Join hundreds of schools already revolutionizing their approach to STEM education with Nexus Labs
+              Partner with Lumiere Foundation to make a lasting impact through education, healthcare, and community development
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/contact-us">
@@ -48,7 +48,7 @@ export default function CTASection() {
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Get Started
+                  Support Our Mission
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </motion.button>
               </Link>
@@ -58,7 +58,7 @@ export default function CTASection() {
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Explore Services
+                  Learn More
                 </motion.button>
               </Link>
             </div>
@@ -68,4 +68,5 @@ export default function CTASection() {
     </section>
   );
 }
+
 

@@ -1,6 +1,6 @@
-# Nexus Labs Landing Page
+# Lumiere Foundation Website
 
-A premium STEM education website with Apple-inspired design, built with Next.js, Tailwind CSS, and Framer Motion.
+A premium charitable trust website with Apple-inspired design, built with Next.js, Tailwind CSS, and Framer Motion. Showcasing educational and charitable initiatives under the Indian Trusts Act, 1882.
 
 ## 🚀 Features
 

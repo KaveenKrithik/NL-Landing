@@ -6,29 +6,29 @@ import { Zap, Shield, Globe, Sparkles } from "lucide-react";
 const features = [
   {
     icon: Zap,
-    title: "Lightning Fast Setup",
-    description: "Get your STEM lab up and running in record time with our streamlined installation process.",
+    title: "Comprehensive Education",
+    description: "Establishing schools, colleges, and training centers across urban and rural areas with international collaborations.",
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=80",
     color: "from-yellow-500 to-orange-500",
   },
   {
     icon: Shield,
-    title: "Certified Excellence",
-    description: "STEM.org USA accredited programs ensuring the highest quality standards in education.",
+    title: "Trusted Excellence",
+    description: "Established under Indian Trusts Act, 1882, ensuring transparency and accountability in all initiatives.",
     image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80",
     color: "from-blue-500 to-cyan-500",
   },
   {
     icon: Globe,
-    title: "Nationwide Reach",
-    description: "Serving schools and institutions across India with comprehensive STEM solutions.",
+    title: "Nationwide Impact",
+    description: "Serving communities across Tamil Nadu and India with educational and charitable programs.",
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80",
     color: "from-green-500 to-emerald-500",
   },
   {
     icon: Sparkles,
-    title: "Innovation First",
-    description: "Cutting-edge technology and methodologies to keep education ahead of the curve.",
+    title: "Holistic Development",
+    description: "Promoting education, healthcare, vocational training, and community welfare for comprehensive growth.",
     image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&q=80",
     color: "from-purple-500 to-pink-500",
   },
@@ -53,10 +53,10 @@ export default function FeaturesSection() {
           className="text-center mb-16 lg:mb-20"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
-            Why Choose <span className="text-primary">Nexus Labs</span>
+            Why Choose <span className="text-primary">Lumiere Foundation</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Experience the difference with our comprehensive approach to STEM education
+            Experience the difference with our comprehensive approach to education, healthcare, and community development
           </p>
         </motion.div>
 

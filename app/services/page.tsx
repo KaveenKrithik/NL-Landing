@@ -4,96 +4,96 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import { motion } from "framer-motion";
 import { 
-  Microscope, 
-  Wrench, 
   Building2, 
   Users, 
   GraduationCap, 
   BookOpen,
   ArrowRight,
-  CheckCircle
+  CheckCircle,
+  Hospital,
+  Home
 } from "lucide-react";
 import Link from "next/link";
 
 export default function Services() {
   const services = [
     {
-      icon: Microscope,
-      title: "Nexus STEM Labs",
+      icon: Building2,
+      title: "Educational Institutions",
       description:
-        "State-of-the-art STEM laboratories equipped with cutting-edge technology and tools for comprehensive hands-on learning experiences.",
+        "Establishing and administering schools (English, Tamil and Other Indian Language medium), colleges, universities, libraries, and hostels across urban and rural areas.",
       features: [
-        "Modern equipment and technology",
-        "Comprehensive curriculum integration",
-        "Expert training and support",
-        "Regular updates and maintenance",
+        "Multi-language medium schools",
+        "Higher education institutions",
+        "Libraries and hostels",
+        "International collaborations",
       ],
       color: "from-blue-500 to-cyan-500",
     },
     {
-      icon: Wrench,
-      title: "ATAL Tinkering Labs",
+      icon: GraduationCap,
+      title: "Scholarships & Student Support",
       description:
-        "Innovative tinkering spaces designed to foster creativity, innovation, and problem-solving skills among students.",
+        "Providing scholarships, stipends, uniforms, transportation, meals, and educational materials to deserving students.",
       features: [
-        "DIY learning environment",
-        "Robotics and electronics kits",
-        "3D printing capabilities",
-        "Mentorship programs",
+        "Full scholarships",
+        "Educational materials",
+        "Transportation support",
+        "Meal programs",
       ],
       color: "from-purple-500 to-pink-500",
     },
     {
-      icon: Building2,
-      title: "Fabrication Labs",
+      icon: BookOpen,
+      title: "Vocational Training",
       description:
-        "Advanced fabrication facilities enabling students to bring their ideas to life through prototyping and manufacturing.",
+        "Comprehensive vocational training programs including tailoring, embroidery, computer education, beauty courses, and handicrafts.",
       features: [
-        "CNC machines and tools",
-        "Laser cutting equipment",
-        "Material processing",
-        "Safety protocols",
+        "Income-generating skills",
+        "Hostel facilities for women",
+        "Certification programs",
+        "Placement assistance",
       ],
       color: "from-orange-500 to-red-500",
     },
     {
-      icon: Users,
-      title: "CSR STEM Solutions",
+      icon: Hospital,
+      title: "Medical Relief",
       description:
-        "Corporate social responsibility programs bringing STEM education to underserved communities and schools.",
+        "Free medical camps, health checkups, specialized therapies, and financial assistance for surgeries and treatments.",
       features: [
-        "Community outreach",
-        "Scholarship programs",
-        "Teacher training",
-        "Resource provision",
+        "Free medical camps",
+        "Health screenings",
+        "Specialized therapies",
+        "Surgery support",
+      ],
+      color: "from-red-500 to-pink-500",
+    },
+    {
+      icon: Home,
+      title: "Shelter & Care",
+      description:
+        "Operating old age homes, orphanages, and shelters for destitute women, children, and the elderly.",
+      features: [
+        "Old age homes",
+        "Orphanages",
+        "Women's shelters",
+        "Rehabilitation services",
       ],
       color: "from-green-500 to-emerald-500",
     },
     {
-      icon: GraduationCap,
-      title: "Workshops",
+      icon: Users,
+      title: "Community Development",
       description:
-        "Interactive workshops covering various STEM domains, from robotics and AI to IoT and aeromodelling.",
+        "Disaster relief, environmental awareness, economic development, and family welfare programs.",
       features: [
-        "Expert-led sessions",
-        "Hands-on activities",
-        "Certification programs",
-        "Flexible scheduling",
+        "Disaster relief",
+        "Environmental programs",
+        "Economic development",
+        "Family welfare",
       ],
       color: "from-indigo-500 to-blue-500",
-    },
-    {
-      icon: BookOpen,
-      title: "Courses",
-      description:
-        "Comprehensive courses designed to build strong foundations in STEM subjects and advanced specializations.",
-      features: [
-        "Structured curriculum",
-        "Progress tracking",
-        "Online and offline options",
-        "Industry-relevant content",
-      ],
-      color: "from-teal-500 to-cyan-500",
     },
   ];
 

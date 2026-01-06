@@ -13,19 +13,37 @@ export default function AnimatedNumber({ value, duration = 2 }: AnimatedNumberPr
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  // Extract number from string (e.g., "50K+" -> 50, "95%" -> 95)
+  // Extract number from string (e.g., "50K+" -> 50000, "10K+" -> 10000, "95%" -> 95)
   const extractNumber = (str: string): number => {
-    const match = str.match(/(\d+\.?\d*)/);
-    return match ? parseFloat(match[1]) : 0;
+    const match = str.match(/(\d+\.?\d*)([KM]?)/i);
+    if (!match) return 0;
+    
+    const num = parseFloat(match[1]);
+    const multiplier = match[2].toUpperCase();
+    
+    if (multiplier === 'K') return num * 1000;
+    if (multiplier === 'M') return num * 1000000;
+    return num;
   };
 
   // Get suffix (e.g., "K+", "%")
   const getSuffix = (str: string): string => {
-    return str.replace(/\d+\.?\d*/g, "");
+    return str.replace(/\d+\.?\d*[KM]?/gi, "");
   };
 
   const numValue = extractNumber(value);
   const suffix = getSuffix(value);
+  
+  // Format number back to display format (e.g., 10000 -> "10K+")
+  const formatNumber = (num: number, originalSuffix: string): string => {
+    if (originalSuffix.includes('K') || originalSuffix.includes('k')) {
+      return `${Math.floor(num / 1000)}K${originalSuffix.replace(/[Kk]/g, '')}`;
+    }
+    if (originalSuffix.includes('M') || originalSuffix.includes('m')) {
+      return `${Math.floor(num / 1000000)}M${originalSuffix.replace(/[Mm]/g, '')}`;
+    }
+    return `${Math.floor(num)}${originalSuffix}`;
+  };
 
   useEffect(() => {
     if (!isInView) return;
@@ -41,7 +59,7 @@ export default function AnimatedNumber({ value, duration = 2 }: AnimatedNumberPr
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
       const current = Math.floor(easeOutQuart * numValue);
       
-      setDisplayValue(`${current}${suffix}`);
+      setDisplayValue(formatNumber(current, suffix));
 
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate);

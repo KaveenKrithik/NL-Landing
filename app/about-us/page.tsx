@@ -11,28 +11,28 @@ export default function AboutUs() {
       icon: Target,
       title: "Our Mission",
       description:
-        "To revolutionize STEM education by providing innovative, hands-on learning experiences that inspire the next generation of innovators and problem solvers.",
+        "To establish and support educational institutions, provide scholarships, promote vocational training, and deliver comprehensive charitable services to uplift communities across Tamil Nadu and India.",
       color: "from-blue-500 to-cyan-500",
     },
     {
       icon: Users,
       title: "Our Vision",
       description:
-        "To be the leading provider of comprehensive STEM education solutions, empowering students and educators across India and beyond.",
+        "To be a leading public charitable trust that transforms lives through education, healthcare, and community development, ensuring dignity and opportunity for all, especially the marginalized and underprivileged.",
       color: "from-purple-500 to-pink-500",
     },
     {
       icon: Award,
       title: "Excellence",
       description:
-        "We maintain the highest standards in STEM education, recognized by STEM.org USA accreditation and trusted by leading educational institutions.",
+        "We maintain the highest standards in all our initiatives, partnering with reputed institutions in India and abroad, ensuring quality education, healthcare, and community services.",
       color: "from-orange-500 to-red-500",
     },
     {
       icon: Lightbulb,
-      title: "Innovation",
+      title: "Compassion",
       description:
-        "We continuously evolve our programs, integrating cutting-edge technologies and methodologies to stay at the forefront of educational innovation.",
+        "We serve with empathy and dedication, addressing the needs of the poor, marginalized, disabled, and vulnerable communities through comprehensive support programs.",
       color: "from-green-500 to-emerald-500",
     },
   ];
@@ -52,10 +52,10 @@ export default function AboutUs() {
             className="max-w-4xl mx-auto text-center"
           >
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 tracking-tight drop-shadow-lg">
-              About <span className="text-primary drop-shadow-md">Nexus Labs</span>
+              About <span className="text-primary drop-shadow-md">Lumiere Foundation</span>
             </h1>
             <p className="text-xl lg:text-2xl text-gray-800 leading-relaxed font-semibold bg-white/70 backdrop-blur-sm px-6 py-4 rounded-2xl drop-shadow-sm">
-              Transforming education through innovation, one student at a time.
+              A Public Charitable Trust dedicated to transforming lives through education, healthcare, and community development.
             </p>
           </motion.div>
         </div>
@@ -89,14 +89,14 @@ export default function AboutUs() {
               <h2 className="text-4xl font-bold text-gray-900 mb-8">Our Story</h2>
               <div className="text-lg text-gray-700 leading-relaxed space-y-6">
                 <p>
-                  From our humble beginnings, we always envisioned a company that
-                  could bring innovative STEM solutions to schools and organizations.
-                  What started as a passion project has grown into one of India's
-                  leading STEM education providers.
+                  Lumiere Foundation was established as a Public Charitable Trust under the 
+                  <strong className="text-primary"> Indian Trusts Act, 1882</strong>, with a 
+                  vision to transform lives through education, healthcare, and community development.
                 </p>
                 <p>
-                  With a commitment to quality and impact, our journey led us to receive
-                  the prestigious <strong className="text-primary">STEM accreditation from STEM.org USA</strong>.
+                  Our foundation is irrevocable in nature, dedicated solely to educational and 
+                  charitable purposes. We work across Tamil Nadu and India, focusing on both 
+                  urban and rural communities, ensuring no one is left behind.
                 </p>
               </div>
             </motion.div>
@@ -111,14 +111,16 @@ export default function AboutUs() {
             >
               <div className="text-lg text-gray-700 leading-relaxed space-y-6">
                 <p>
-                  This accreditation is a testament to our dedication to rigorous
-                  standards, recognized methodologies, and a future-focused approach in
-                  STEM education.
+                  Our comprehensive mandate covers educational purposes including establishing 
+                  schools, colleges, and vocational training centers, providing scholarships, 
+                  promoting digital literacy, and supporting holistic development through 
+                  cultural education.
                 </p>
                 <p>
-                  Today, we collaborate with hundreds of educational institutions,
-                  empowering thousands of students with the skills and knowledge they
-                  need to thrive in an increasingly technology-driven world.
+                  On the charitable front, we operate medical centers, old age homes, orphanages, 
+                  provide disaster relief, conduct environmental awareness programs, and support 
+                  economic development initiatives. Every initiative is designed to create lasting 
+                  positive change in the communities we serve.
                 </p>
               </div>
             </motion.div>
@@ -176,10 +178,10 @@ export default function AboutUs() {
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
             {[
-              { number: "500+", label: "Schools Partnered" },
-              { number: "50K+", label: "Students Impacted" },
-              { number: "100+", label: "STEM Labs Installed" },
-              { number: "10+", label: "Years of Excellence" },
+              { number: "50+", label: "Educational Institutions" },
+              { number: "10K+", label: "Students Supported" },
+              { number: "5K+", label: "Medical Beneficiaries" },
+              { number: "2K+", label: "Vocational Trainees" },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
