@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Heart, Phone, Mail, MapPin } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,10 +19,11 @@ export default function Header() {
   }, []);
 
   const navItems = [
-    { name: "The Trust", path: "#trust" },
-    { name: "Objectives", path: "#objectives" },
-    { name: "Vocational", path: "#vocational" },
-    { name: "Impact", path: "#impact" },
+    { name: "About", path: "/about" },
+    { name: "Programs", path: "/programs" },
+    { name: "Vocational", path: "/vocational" },
+    { name: "Donate", path: "/donate" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
@@ -120,21 +122,24 @@ export default function Header() {
 
       {/* Main Navigation */}
       <nav
-        className={`transition-all duration-500 ${
-          isScrolled
-            ? "bg-navy/95 backdrop-blur-xl shadow-lg shadow-black/20"
-            : "bg-navy/80 backdrop-blur-xl"
-        }`}
+        className={`transition-all duration-500 ${isScrolled
+          ? "bg-navy/95 backdrop-blur-xl shadow-lg shadow-black/20"
+          : "bg-navy/80 backdrop-blur-xl"
+          }`}
       >
         <div className="container mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-20 lg:h-24">
             {/* Logo */}
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               <Link href="/" className="flex items-center gap-3 group">
-                {/* Logo Icon */}
-                <div className="w-10 h-12 bg-gradient-to-br from-gray-400 to-gray-600 rounded-sm flex items-center justify-center">
-                  <div className="w-6 h-6 bg-gradient-to-br from-gray-300 to-gray-500 rounded-sm" />
-                </div>
+                {/* Logo Image */}
+                <Image
+                  src="/lumiere-logo.png"
+                  alt="Lumiere Foundation Logo"
+                  width={48}
+                  height={48}
+                  className="h-12 w-auto"
+                />
                 <div>
                   <div className="text-xl lg:text-2xl font-bold tracking-wide">
                     <span className="text-white">LUMIERE</span>

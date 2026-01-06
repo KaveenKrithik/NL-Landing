@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const trainingPrograms = [
     {
@@ -76,7 +77,7 @@ export default function VocationalSection() {
                         </ul>
 
                         {/* CTA Button */}
-                        <Link href="#donate">
+                        <Link href="/donate">
                             <motion.button
                                 className="px-8 py-4 bg-accent text-white rounded-full text-lg font-semibold shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/40 transition-all duration-300"
                                 whileHover={{ scale: 1.05, y: -2 }}
@@ -96,32 +97,30 @@ export default function VocationalSection() {
                         className="grid grid-cols-2 gap-4"
                     >
                         {/* Image 1 - Tailoring */}
-                        <div className="relative aspect-[3/4] rounded-3xl overflow-hidden bg-gray-800/50 border border-white/10">
-                            <div className="absolute inset-0 bg-gradient-to-br from-gray-700/30 to-gray-800/50" />
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="text-center text-gray-500 p-4">
-                                    <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-gray-700/50 flex items-center justify-center">
-                                        <svg className="w-8 h-8 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                        </svg>
-                                    </div>
-                                    <p className="text-xs">Tailoring Center</p>
-                                </div>
+                        <div className="relative aspect-[3/4] rounded-3xl overflow-hidden border border-white/10 shadow-xl">
+                            <Image
+                                src="/images/vocational-tailoring.png"
+                                alt="Women learning tailoring at vocational center"
+                                fill
+                                className="object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent" />
+                            <div className="absolute bottom-4 left-4 right-4">
+                                <p className="text-white text-sm font-medium">Tailoring Center</p>
                             </div>
                         </div>
 
                         {/* Image 2 - Computer Lab */}
-                        <div className="relative aspect-[3/4] rounded-3xl overflow-hidden bg-gray-800/50 border border-white/10 mt-8">
-                            <div className="absolute inset-0 bg-gradient-to-br from-gray-700/30 to-gray-800/50" />
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="text-center text-gray-500 p-4">
-                                    <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-gray-700/50 flex items-center justify-center">
-                                        <svg className="w-8 h-8 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                        </svg>
-                                    </div>
-                                    <p className="text-xs">Computer Lab</p>
-                                </div>
+                        <div className="relative aspect-[3/4] rounded-3xl overflow-hidden border border-white/10 shadow-xl mt-8">
+                            <Image
+                                src="/images/vocational-computer.png"
+                                alt="Students learning computer skills"
+                                fill
+                                className="object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent" />
+                            <div className="absolute bottom-4 left-4 right-4">
+                                <p className="text-white text-sm font-medium">Computer Lab</p>
                             </div>
                         </div>
                     </motion.div>

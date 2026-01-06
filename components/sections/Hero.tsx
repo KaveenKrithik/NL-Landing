@@ -3,12 +3,141 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+
+// Floating education words and symbols for background effect
+const floatingWords = [
+  { text: "EDUCATION", x: "5%", y: "15%", size: "text-6xl", delay: 0 },
+  { text: "KNOWLEDGE", x: "70%", y: "20%", size: "text-5xl", delay: 2 },
+  { text: "EMPOWER", x: "15%", y: "60%", size: "text-7xl", delay: 4 },
+  { text: "LEARN", x: "80%", y: "70%", size: "text-4xl", delay: 1 },
+  { text: "GROWTH", x: "45%", y: "85%", size: "text-5xl", delay: 3 },
+  { text: "FUTURE", x: "25%", y: "40%", size: "text-6xl", delay: 5 },
+  { text: "INSPIRE", x: "60%", y: "45%", size: "text-4xl", delay: 2.5 },
+  { text: "WISDOM", x: "85%", y: "35%", size: "text-5xl", delay: 1.5 },
+  { text: "CHANGE", x: "10%", y: "80%", size: "text-4xl", delay: 4.5 },
+  { text: "HOPE", x: "55%", y: "10%", size: "text-6xl", delay: 3.5 },
+];
+
+const floatingSymbols = [
+  { text: "∑", x: "20%", y: "25%", size: "text-8xl", delay: 0.5 },
+  { text: "∞", x: "75%", y: "55%", size: "text-7xl", delay: 2.5 },
+  { text: "π", x: "40%", y: "75%", size: "text-6xl", delay: 4.5 },
+  { text: "√", x: "65%", y: "30%", size: "text-8xl", delay: 1.5 },
+  { text: "α", x: "30%", y: "55%", size: "text-5xl", delay: 3.5 },
+  { text: "λ", x: "50%", y: "35%", size: "text-6xl", delay: 5.5 },
+  { text: "Ω", x: "85%", y: "80%", size: "text-7xl", delay: 0 },
+  { text: "∫", x: "5%", y: "45%", size: "text-9xl", delay: 2 },
+];
+
+const floatingEquations = [
+  { text: "E = mc²", x: "8%", y: "30%", delay: 1 },
+  { text: "a² + b² = c²", x: "72%", y: "65%", delay: 3 },
+  { text: "F = ma", x: "35%", y: "90%", delay: 5 },
+  { text: "∫ f(x)dx", x: "90%", y: "15%", delay: 2 },
+];
+
+// Zoom fade loop animation variant
+const zoomFadeAnimation = {
+  initial: { scale: 0.5, opacity: 0 },
+  animate: {
+    scale: [0.5, 1.2, 1, 1.2, 0.5],
+    opacity: [0, 0.08, 0.05, 0.08, 0],
+  },
+};
+
+const symbolZoomFadeAnimation = {
+  initial: { scale: 0.3, opacity: 0 },
+  animate: {
+    scale: [0.3, 1.3, 1, 1.3, 0.3],
+    opacity: [0, 0.1, 0.06, 0.1, 0],
+  },
+};
+
+const equationZoomFadeAnimation = {
+  initial: { scale: 0.4, opacity: 0 },
+  animate: {
+    scale: [0.4, 1.1, 0.9, 1.1, 0.4],
+    opacity: [0, 0.06, 0.04, 0.06, 0],
+  },
+};
 
 export default function Hero() {
   return (
     <section id="trust" className="relative pt-20 lg:pt-24 overflow-hidden min-h-screen flex items-center bg-navy">
       {/* Tech Pattern Background */}
       <div className="absolute inset-0 tech-pattern" />
+
+      {/* Floating Education Words - Zoom Fade Loop Animation */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {floatingWords.map((word, index) => (
+          <motion.div
+            key={`word-${index}`}
+            className={`absolute font-bold text-white ${word.size} tracking-widest select-none`}
+            style={{
+              left: word.x,
+              top: word.y,
+            }}
+            initial={zoomFadeAnimation.initial}
+            animate={zoomFadeAnimation.animate}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: word.delay,
+              times: [0, 0.25, 0.5, 0.75, 1],
+            }}
+          >
+            {word.text}
+          </motion.div>
+        ))}
+
+        {/* Floating Math Symbols with Zoom Fade */}
+        {floatingSymbols.map((symbol, index) => (
+          <motion.div
+            key={`symbol-${index}`}
+            className={`absolute font-serif text-accent ${symbol.size} select-none`}
+            style={{
+              left: symbol.x,
+              top: symbol.y,
+            }}
+            initial={symbolZoomFadeAnimation.initial}
+            animate={symbolZoomFadeAnimation.animate}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: symbol.delay,
+              times: [0, 0.25, 0.5, 0.75, 1],
+            }}
+          >
+            {symbol.text}
+          </motion.div>
+        ))}
+
+        {/* Floating Equations with Zoom Fade */}
+        {floatingEquations.map((equation, index) => (
+          <motion.div
+            key={`equation-${index}`}
+            className="absolute text-primary font-mono text-2xl select-none"
+            style={{
+              left: equation.x,
+              top: equation.y,
+            }}
+            initial={equationZoomFadeAnimation.initial}
+            animate={equationZoomFadeAnimation.animate}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: equation.delay,
+              times: [0, 0.25, 0.5, 0.75, 1],
+            }}
+          >
+            {equation.text}
+          </motion.div>
+        ))}
+      </div>
 
       {/* Glowing Effect */}
       <div className="absolute inset-0">
@@ -73,28 +202,23 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Right Column - Image Placeholder */}
+          {/* Right Column - Hero Image */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="relative"
           >
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gray-800/50 border border-white/10">
-              {/* Placeholder gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-700/50 to-gray-800/50" />
-
-              {/* Decorative elements */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <div className="w-20 h-20 mx-auto mb-4 rounded-lg bg-gray-700/50 flex items-center justify-center">
-                    <svg className="w-10 h-10 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <p className="text-sm">Featured Image</p>
-                </div>
-              </div>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+              <Image
+                src="/images/hero-classroom.png"
+                alt="Students learning in a classroom"
+                fill
+                className="object-cover"
+                priority
+              />
+              {/* Overlay gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/40 to-transparent" />
             </div>
 
             {/* Floating decoration */}

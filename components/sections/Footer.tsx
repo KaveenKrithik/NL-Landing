@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 
 const trustLinks = [
@@ -43,9 +44,13 @@ export default function Footer() {
           >
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-12 bg-gradient-to-br from-gray-400 to-gray-600 rounded-sm flex items-center justify-center">
-                <div className="w-6 h-6 bg-gradient-to-br from-gray-300 to-gray-500 rounded-sm" />
-              </div>
+              <Image
+                src="/lumiere-logo.png"
+                alt="Lumiere Foundation Logo"
+                width={48}
+                height={48}
+                className="h-12 w-auto"
+              />
               <div>
                 <div className="text-xl font-bold tracking-wide text-white">LUMIERE</div>
                 <div className="text-xs font-medium text-primary tracking-widest">FOUNDATION</div>

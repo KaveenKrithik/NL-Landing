@@ -3,13 +3,14 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, GraduationCap } from "lucide-react";
+import Image from "next/image";
 
 const impactLevels = [
-    { id: "materials", label: "Materials", amount: 2500, description: "School supplies for one student" },
-    { id: "literacy", label: "Literacy", amount: 5000, description: "Adult literacy program support" },
-    { id: "culture", label: "Culture", amount: 10000, description: "Cultural and arts education" },
-    { id: "vocational", label: "Vocational", amount: 15000, description: "Vocational training sponsorship" },
-    { id: "scholarship", label: "Scholarship", amount: 25000, description: "Complete tuition, hostel, and food for a year" },
+    { id: "materials", label: "Materials", amount: 2500, description: "School supplies for one student", image: "/images/teacher-student.png" },
+    { id: "literacy", label: "Literacy", amount: 5000, description: "Adult literacy program support", image: "/images/hero-classroom.png" },
+    { id: "culture", label: "Culture", amount: 10000, description: "Cultural and arts education", image: "/images/community-event.png" },
+    { id: "vocational", label: "Vocational", amount: 15000, description: "Vocational training sponsorship", image: "/images/vocational-tailoring.png" },
+    { id: "scholarship", label: "Scholarship", amount: 25000, description: "Complete tuition, hostel, and food for a year", image: "/images/scholarship-student.png" },
 ];
 
 export default function DonationSection() {
@@ -47,16 +48,21 @@ export default function DonationSection() {
                     <div className="bg-white rounded-3xl border border-gray-200 shadow-xl overflow-hidden">
                         <div className="grid lg:grid-cols-2">
                             {/* Left - Image/Preview */}
-                            <div className="relative aspect-square lg:aspect-auto bg-gradient-to-br from-gray-200 to-gray-300 flex items-end p-8">
-                                {/* Placeholder background */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-gray-300/80 to-gray-400/60" />
+                            <div className="relative aspect-square lg:aspect-auto min-h-[300px] lg:min-h-[400px]">
+                                <Image
+                                    src={currentImpact.image}
+                                    alt={currentImpact.description}
+                                    fill
+                                    className="object-cover transition-all duration-500"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
 
                                 {/* Impact Label Overlay */}
-                                <div className="relative z-10">
-                                    <h3 className="text-2xl font-bold text-gray-800 mb-1">
+                                <div className="absolute bottom-6 left-6 right-6 z-10">
+                                    <h3 className="text-2xl font-bold text-white mb-1">
                                         {currentImpact.label === "Scholarship" ? "Full Scholarship" : currentImpact.label}
                                     </h3>
-                                    <p className="text-gray-600">
+                                    <p className="text-gray-200">
                                         {currentImpact.description}
                                     </p>
                                 </div>
