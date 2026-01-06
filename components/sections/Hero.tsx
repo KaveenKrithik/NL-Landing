@@ -190,7 +190,7 @@ export default function Hero() {
                   <ArrowDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
                 </motion.button>
               </Link>
-              <Link href="/donate">
+              <Link href="#donate">
                 <motion.button
                   className="px-8 py-4 bg-transparent text-white rounded-full text-lg font-semibold border border-white/30 hover:bg-white/10 transition-all duration-300"
                   whileHover={{ scale: 1.05, y: -2 }}
