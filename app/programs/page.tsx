@@ -5,19 +5,20 @@ import Footer from "@/components/sections/Footer";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 
 export const metadata = {
-    title: "Our Programs - Lumiere Foundation",
-    description: "Explore our educational programs including schools, scholarships, digital literacy, and cultural education initiatives.",
+  title: "Our Programs - Lumiere Foundation",
+  description:
+    "Explore our programs including education, healthcare, women & youth empowerment, vocational training, and social welfare initiatives.",
 };
 
 export default function ProgramsPage() {
-    return (
-        <main className="min-h-screen">
-            <Header />
-            <div className="pt-24" /> {/* Spacer for fixed header */}
-            <ProgramsSection />
-            <ObjectivesSection />
-            <Footer />
-            <ScrollToTop />
-        </main>
-    );
+  return (
+    <main className="min-h-screen">
+      <Header />
+      <div className="pt-24" /> {/* Spacer for fixed header */}
+      <ProgramsSection />
+      <ObjectivesSection />
+      <Footer />
+      <ScrollToTop />
+    </main>
+  );
 }

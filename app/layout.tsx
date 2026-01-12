@@ -9,8 +9,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Lumiere Foundation - Empowering Generations Through Education",
-  description: "A Public Charitable Trust dedicated to establishing educational institutions, promoting academic excellence, and providing vocational training to the underprivileged across Tamil Nadu and India.",
+  title:
+    "Lumiere Foundation - Lighting Lives Through Education, Compassion & Service",
+  description:
+    "Lumiere Foundation is a charitable and educational trust committed to empowering individuals and communities through inclusive education, healthcare access, social welfare, and sustainable development initiatives.",
   icons: {
     icon: "/lumiere-logo.png",
     apple: "/lumiere-logo.png",

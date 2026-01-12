@@ -7,38 +7,38 @@ import Image from "next/image";
 
 const impactLevels = [
   {
-    id: "materials",
-    label: "Materials",
+    id: "education",
+    label: "Education",
     amount: 2500,
-    description: "School supplies for one student",
+    description: "Sponsor education or materials for a student",
     image: "/images/teacher-student.png",
   },
   {
-    id: "literacy",
-    label: "Literacy",
+    id: "medical",
+    label: "Medical",
     amount: 5000,
-    description: "Adult literacy program support",
+    description: "Support medical assistance and health camps",
     image: "/images/hero-classroom.png",
-  },
-  {
-    id: "culture",
-    label: "Culture",
-    amount: 10000,
-    description: "Cultural and arts education",
-    image: "/images/community-event.png",
   },
   {
     id: "vocational",
     label: "Vocational",
-    amount: 15000,
-    description: "Vocational training sponsorship",
+    amount: 10000,
+    description: "Vocational training sponsorship for women",
     image: "/images/vocational-tailoring.png",
+  },
+  {
+    id: "csr",
+    label: "CSR Partner",
+    amount: 25000,
+    description: "CSR and institutional partnership contribution",
+    image: "/images/community-event.png",
   },
   {
     id: "scholarship",
     label: "Scholarship",
-    amount: 25000,
-    description: "Complete tuition, hostel, and food for a year",
+    amount: 50000,
+    description: "Complete scholarship for a year",
     image: "/images/scholarship-student.png",
   },
 ];
@@ -63,10 +63,11 @@ export default function DonationSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
-            Your Contribution Matters
+            Support Our Mission
           </h2>
           <p className="text-xl text-gray-600">
-            Choose an area of impact defined in our Trust Deed.
+            Your contribution helps transform lives through education,
+            healthcare, and empowerment.
           </p>
         </motion.div>
 
@@ -198,7 +199,7 @@ export default function DonationSection() {
 
                 {/* Tax Exemption Note */}
                 <p className="text-center text-sm text-gray-500 mt-4">
-                  All donations are eligible for tax exemption under 80G.
+                  All donations are eligible for 80G Tax Exemption
                 </p>
               </div>
             </div>

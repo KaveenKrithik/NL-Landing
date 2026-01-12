@@ -64,7 +64,10 @@ const equationZoomFadeAnimation = {
 
 export default function Hero() {
   return (
-    <section id="trust" className="relative pt-20 lg:pt-24 overflow-hidden min-h-screen flex items-center bg-navy">
+    <section
+      id="trust"
+      className="relative pt-20 lg:pt-24 overflow-hidden min-h-screen flex items-center bg-navy"
+    >
       {/* Tech Pattern Background */}
       <div className="absolute inset-0 tech-pattern" />
 
@@ -163,40 +166,45 @@ export default function Hero() {
             >
               <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
               <span className="text-sm font-medium text-gray-300 tracking-wide">
-                EST. UNDER INDIAN TRUSTS ACT, 1882
+                CHARITABLE AND EDUCATIONAL TRUST
               </span>
             </motion.div>
 
             {/* Heading */}
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-[1.1] tracking-tight">
-              Empowering{" "}
-              <span className="text-accent">Generations</span>
+              Lighting Lives Through{" "}
+              <span className="text-accent">
+                Education, Compassion & Service
+              </span>
             </h1>
 
             {/* Description */}
             <p className="text-lg lg:text-xl text-gray-400 max-w-xl mb-10 leading-relaxed">
-              A Public Charitable Trust dedicated to establishing educational institutions, promoting academic excellence, and providing vocational training to the underprivileged across Tamil Nadu and India.
+              Lumiere Foundation is a charitable and educational trust committed
+              to empowering individuals and communities through inclusive
+              education, healthcare access, social welfare, and sustainable
+              development initiatives.
             </p>
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="#objectives">
+              <Link href="#donate">
                 <motion.button
                   className="group px-8 py-4 bg-primary text-white rounded-full text-lg font-semibold shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 transition-all duration-300 flex items-center gap-2"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Our Mission
+                  Donate Now
                   <ArrowDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
                 </motion.button>
               </Link>
-              <Link href="#donate">
+              <Link href="#programs">
                 <motion.button
                   className="px-8 py-4 bg-transparent text-white rounded-full text-lg font-semibold border border-white/30 hover:bg-white/10 transition-all duration-300"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Support Us
+                  Our Programs
                 </motion.button>
               </Link>
             </div>

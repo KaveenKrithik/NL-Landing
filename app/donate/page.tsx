@@ -6,20 +6,21 @@ import Footer from "@/components/sections/Footer";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 
 export const metadata = {
-    title: "Donate - Lumiere Foundation",
-    description: "Support our mission to empower generations through education. Your contribution is eligible for 80G tax exemption.",
+  title: "Donate - Lumiere Foundation",
+  description:
+    "Support our mission to transform lives through education, healthcare, and empowerment. All donations are utilized strictly for charitable purposes.",
 };
 
 export default function DonatePage() {
-    return (
-        <main className="min-h-screen">
-            <Header />
-            <div className="pt-24" /> {/* Spacer for fixed header */}
-            <DonationSection />
-            <ImpactStatsSection />
-            <FAQSection />
-            <Footer />
-            <ScrollToTop />
-        </main>
-    );
+  return (
+    <main className="min-h-screen">
+      <Header />
+      <div className="pt-24" /> {/* Spacer for fixed header */}
+      <DonationSection />
+      <ImpactStatsSection />
+      <FAQSection />
+      <Footer />
+      <ScrollToTop />
+    </main>
+  );
 }

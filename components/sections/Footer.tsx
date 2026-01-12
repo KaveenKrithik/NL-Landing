@@ -3,28 +3,26 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
 
-const trustLinks = [
-  "About the Trust",
-  "Our Founders",
-  "Trust Deed",
-  "Annual Reports",
-];
+const trustLinks = ["About Us", "Our Vision", "Governance", "Transparency"];
 
 const programLinks = [
-  "Schools",
-  "Scholarships",
-  "Vocational Training",
-  "Digital Literacy",
+  "Education",
+  "Healthcare",
+  "Women Empowerment",
+  "Social Welfare",
 ];
 
-const legalLinks = [
-  "Privacy Policy",
-  "Terms of Use",
-  "80G Certificate",
-  "12A Registration",
-];
+const legalLinks = ["Privacy Policy", "Terms of Use", "Refund Policy"];
 
 export default function Footer() {
   return (
@@ -52,13 +50,20 @@ export default function Footer() {
                 className="h-12 w-auto"
               />
               <div>
-                <div className="text-xl font-bold tracking-wide text-primary">LUMIERE</div>
-                <div className="text-xs font-medium text-white tracking-widest">FOUNDATION</div>
+                <div className="text-xl font-bold tracking-wide text-primary">
+                  LUMIERE
+                </div>
+                <div className="text-xs font-medium text-white tracking-widest">
+                  FOUNDATION
+                </div>
               </div>
             </Link>
 
             <p className="text-sm leading-relaxed mb-6 text-gray-400">
-              A Public Charitable Trust registered under the Indian Trusts Act, 1882. Dedicated to education and empowerment across Tamil Nadu and India.
+              A Charitable & Educational Trust committed to empowering
+              individuals and communities through inclusive education,
+              healthcare access, and social welfare. India | Not-for-Profit
+              Organization.
             </p>
 
             {/* Social Links */}
@@ -130,20 +135,34 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <h4 className="text-lg font-semibold text-white mb-6">Contact Us</h4>
+            <h4 className="text-lg font-semibold text-white mb-6">
+              Contact Us
+            </h4>
 
             <div className="space-y-4 mb-8">
-              <a href="mailto:lumierefoundation.india@gmail.com" className="flex items-center gap-3 text-sm text-gray-400 hover:text-primary transition-colors">
+              <a
+                href="mailto:lumierfoundation.india@gmail.com"
+                className="flex items-center gap-3 text-sm text-gray-400 hover:text-primary transition-colors"
+              >
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                lumierefoundation.india@gmail.com
+                lumierfoundation.india@gmail.com
               </a>
-              <a href="tel:+914412345678" className="flex items-center gap-3 text-sm text-gray-400 hover:text-primary transition-colors">
+              <a
+                href="tel:+914412345678"
+                className="flex items-center gap-3 text-sm text-gray-400 hover:text-primary transition-colors"
+              >
                 <Phone className="w-4 h-4 flex-shrink-0" />
                 +91 44 1234 5678
               </a>
               <div className="flex items-start gap-3 text-sm text-gray-400">
                 <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                <span>Chennai, Tamil Nadu, India</span>
+                <span>
+                  123 Foundation Street
+                  <br />
+                  Anna Nagar, Chennai
+                  <br />
+                  Tamil Nadu 600040, India
+                </span>
               </div>
             </div>
 
@@ -172,7 +191,9 @@ export default function Footer() {
           className="mt-12 lg:mt-16 pt-8 border-t border-white/10 text-center text-sm text-gray-500"
         >
           <p>
-            © {new Date().getFullYear()} Lumiere Foundation. All rights reserved. | Registered under Indian Trusts Act, 1882
+            © {new Date().getFullYear()} Lumiere Foundation. All Rights
+            Reserved. | A Charitable & Educational Trust | India |
+            Not-for-Profit Organization
           </p>
         </motion.div>
       </div>
